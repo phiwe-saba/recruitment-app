@@ -33,8 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link" href="{{ route('jobs/index') }}">Jobs</a>
                         <a class="nav-link" href="#">Link</a>
                         <a class="nav-link disabled">Disabled</a>
                     </ul>

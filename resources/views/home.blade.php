@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -15,18 +15,6 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                </div>
-
-                <div class="row align-items-center">
-                    <div class="col">
-                        <button><a href="{{ url('jobs/job') }}">Add job</a></button>
-                    </div>
-                    <div class="col">
-                        One of three columns
-                    </div>
-                    <div class="col">
-                        One of three columns
-                    </div>
                 </div>
             </div>
         </div>
