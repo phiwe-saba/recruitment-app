@@ -14,6 +14,7 @@
             <div class="col-12">
                 <form action="{{ route('jobs/update', ['job' => $job]) }}">
                     @csrf
+                    @method('PATCH');
                     <div class="form-group">
                         <label for="title">Title:</label><br>
                         <input type="text" name="title" id="title" >

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <h1>Job list</h1>
-            <p><a href="{{ route('jobs/edit', ['job' => $job) }}">Edit</a></p>
+            <p><a href="{{ route('jobs/edit', ['job' => $job]) }}">Edit</a></p>
 
             <form action="{{ route('jobs/destroy', ['job' => $job]) }}" method="POST">
                 @method('DELETE')

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'We-Recruit') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,7 +18,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/job.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -34,8 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
-                        <a class="nav-link" href="{{ route('jobs/index') }}">Jobs</a>
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                        <a class="nav-link" href="">Jobs</a>
                         <a class="nav-link" href="#">Link</a>
                         <a class="nav-link disabled">Disabled</a>
                     </ul>
