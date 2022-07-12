@@ -17,12 +17,12 @@
                     @method('PATCH');
                     <div class="form-group">
                         <label for="title">Title:</label><br>
-                        <input type="text" name="title" id="title" >
+                        <input type="text" name="title" class="form-control">
                     </div>
                     
                     <div class="form-group">
                         <label for="dep_name">Department Name:</label><br>
-                        <select name="department_id" id="department_id">
+                        <select name="department_id" class="form-control">
                             @foreach($departments as $department)
                                 <option value="{{ $department->id }}"> {{ $department->department_name }}</option>
                             @endforeach
@@ -31,7 +31,7 @@
 
                     <div class="form-group">
                         <label for="job_type">Job Type:</label><br>
-                        <select name="job_type">
+                        <select name="job_type" class="form-control">
                             <option value="" disabled>Select job type</option>
                             <option value="Contract" {{ 'selected' }}>Contract</option>
                             <option value="Permanant" {{ 'selected' }}>Permanant</option>
@@ -41,7 +41,7 @@
 
                     <div class="form-group">
                         <label for="location">Location:</label><br>
-                        <select name="location">
+                        <select name="location" class="form-control">
                             <option value="" disabled>Select location</option>
                             <option value="Gauteng" {{ 'selected' }}>Gauteng</option>
                             <option value="Port Elizabeth" {{ 'selected' }}>Port Elizabeth</option>
