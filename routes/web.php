@@ -29,6 +29,6 @@ Route::delete('/jobs/{job}', 'App\Http\Controllers\JobController@destroy')->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/applicants/index', 'App\Http\Controllers\ApplicantController@index')->name('applicants/index');
-Route::get('/applicants/create', 'App\Http\Controllers\ApplicantController@create')->name('applicants/create');
-Route::post('/applicants/store', 'App\Http\Controllers\ApplicantController@store')->name('applicants/store');
+Route::get('/applications/index', 'App\Http\Controllers\ApplicantController@index')->name('applications/index');
+Route::get('/applications/create', 'App\Http\Controllers\ApplicantController@create')->name('applications/create');
+Route::post('/applications/store', 'App\Http\Controllers\ApplicantController@store')->name('applications/store');

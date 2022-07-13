@@ -14,7 +14,9 @@ class Job extends Model
         return $this->belongsTo(Department::class);
     }
 
-    public function applicants(){
-        return $this->hasMany(Applicant::class);
+    //establishing connection of relationship with application
+    public function application(){
+        return $this->belongsTo(Application::class);
     }
+
 }

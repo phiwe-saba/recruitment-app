@@ -17,7 +17,7 @@
         </div>
     </div>
     
-    <form action="/jobs" method="POST">
+    <form action="/jobs/store" method="POST">
         @csrf
         <div class="mb-3">
             <label for="title">Title:</label><br>

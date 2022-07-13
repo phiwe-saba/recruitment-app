@@ -8,6 +8,10 @@ use App\Models\Department;
 
 class JobController extends Controller
 {
+    /*public function __construct(){
+        $this->middleware('auth');
+    }*/
+    
     public function index(){
         $jobs = Job::all();
         return view('jobs/index', compact('jobs'));
@@ -30,7 +34,7 @@ class JobController extends Controller
 
         Job::create($data);
 
-        return redirect('jobs');
+        return redirect('jobs/index');
     }
 
     public function show(Job $job){
