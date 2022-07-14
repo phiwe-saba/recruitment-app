@@ -15,8 +15,8 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('job_id');
-            $table->unsignedInteger('user_id');
+            $table->integer('job_id')->nullable()->unsigned()->index();
+            $table->integer('user_id')>nullable()->unsigned()->index();
             $table->string('status');
             $table->timestamps();
         });

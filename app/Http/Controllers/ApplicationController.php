@@ -30,10 +30,10 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        $users = User::all();
-        $jobs = Job::all();
+        //$users = User::all();
+        //$jobs = Job::all();
 
-        return view('application/create', compact('users', 'jobs'));
+        return view('application/create');
     }
 
     /**
@@ -44,7 +44,16 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validating the data
+        $data = request()->validate([
+            'user_id' => 'required',
+            'job_id' => 'required',
+            'status' => 'required'
+        ]);
+
+        Application::create($data);
+
+        return redirect('application/create');
     }
 
     /**
