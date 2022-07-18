@@ -16,7 +16,7 @@ class Job extends Model
 
     //establishing connection of relationship with application
     public function application(){
-        return $this->belongsTo(Application::class);
+        return $this->belongsTo(Application::class, 'job_id');
     }
 
 }

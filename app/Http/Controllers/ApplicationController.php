@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Models\User;
-use Models\Job;
+use App\Models\User;
+use App\Models\Job;
 
 class ApplicationController extends Controller
 {
@@ -19,8 +19,8 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        $applications = Application::all();
-        return view('applications/index', compact('applications'));
+        $jobs = Job::all();
+        return view('jobs/index', compact('jobs'));
     }
 
     /**
@@ -30,10 +30,12 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        //$users = User::all();
-        //$jobs = Job::all();
+        //$application = User::find($id)->users;
+        //$application = Job::find($id)->jobs;
+        
+        
 
-        return view('application/create');
+        return view('applications/create');
     }
 
     /**

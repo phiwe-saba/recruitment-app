@@ -32,7 +32,7 @@
         
         <div class="mb-3">
             <label for="dep_name">Department Name:</label><br>
-            <select name="department_id" value="{{ old('first_name') }}" class="form-control">
+            <select name="department_id" value="{{ old('department_name') }}" class="form-control">
                 <option value="" disabled>Select location</option>
                 @foreach($departments as $department)
                     <option value="{{ $department->id }}"> {{ $department->department_name }}</option>
@@ -48,7 +48,7 @@
 
         <div class="mb-3">
             <label for="job_type">Job Type:</label><br>
-            <select name="job_type" value="{{ old('first_name') }}" class="form-control">
+            <select name="job_type" value="{{ old('job_type') }}" class="form-control">
                 <option value="" disabled>Select job type</option>
                 <option value="Contract" {{ 'selected' }}>Contract</option>
                 <option value="Permanant" {{ 'selected' }}>Permanant</option>
@@ -64,7 +64,7 @@
 
         <div class="mb-3">
             <label for="location">Location:</label><br>
-            <select name="location" value="{{ old('first_name') }}" class="form-control">
+            <select name="location" value="{{ old('location') }}" class="form-control">
                 <option value="" disabled>Select location</option>
                 <option value="Gauteng" {{ 'selected' }}>Gauteng</option>
                 <option value="Port Elizabeth" {{ 'selected' }}>Port Elizabeth</option>

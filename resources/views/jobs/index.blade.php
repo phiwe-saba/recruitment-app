@@ -1,13 +1,13 @@
 @extends('layouts\admin')
 
-@section('title', 'Job list')
+@section('title', 'Job vacancies')
 
 @section('content')
 
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>Job list</h1>
+            <h1>Job vacancies</h1>
         </div>
     </div>
 
@@ -17,19 +17,8 @@
         </div>
     </div>
 
-    <!--@foreach($jobs as $job)
-        <div class="row">
-            <div class="col-2">{{ $job->id }}</div>
-            <div class="col-2">{{ $job->title }}</div>
-            <div class="col-2">{{ $job->department->department_name}}</div>
-            <div class="col-2">{{ $job->job_type }}</div>
-            <div class="col-2">{{ $job->location }}</div>
-            <div class="col-2">{{ $job->created_at }}</div>
-        </div>
-    @endforeach-->
-
     @foreach($jobs as $job)
-        <div class="card mb-3">
+        <div class="card">
             <div class="card-body">
                 <a href="/jobs/{{$job->id}}">
                     <div class="title">

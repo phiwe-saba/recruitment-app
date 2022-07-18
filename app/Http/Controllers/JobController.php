@@ -12,19 +12,28 @@ class JobController extends Controller
         $this->middleware('auth');
     }*/
     
-    public function index(){
+    public function index()
+    {
         $jobs = Job::all();
         return view('jobs/index', compact('jobs'));
     }
 
-    public function create(){
+    public function dashboard()
+    {
+        $jobs = Job::all();
+        return view('jobs/dashboard', compact('jobs'));
+    }
+
+    public function create()
+    {
         
         $departments = Department::all();
 
         return view('jobs/create', compact('departments'));
     }
 
-    public function store(){
+    public function store()
+    {
         $data = request()->validate([
             'title' => 'required',
             'job_type' => 'required',
@@ -37,29 +46,38 @@ class JobController extends Controller
         return redirect('jobs/index');
     }
 
-    public function show(Job $job){
+    public function show(Job $job)
+    {
         return view('jobs/show', compact('job'));
     }
 
-    public function edit(Job $job){
+    public function edit(Job $job)
+    {
 
         $departments = Department::all();
 
         return view('jobs/edit', compact('job', 'departments'));
     }
 
-    /*public function update(Job $job){
-        $job->update($this->validateRequest());
+    public function update(Request $request, Job $job)
+    {
+        $request->validate([
+            'title' => 'required',
+            'job_type' => 'required',
+            'location' => 'required',
+            'department_id' => 'department_id'
+        ]);
 
-        return redirect('jobs/'. $customer->id);
-    }*/
+        $job->update($request->all());
 
-    public function destroy(Job $job){
-        $this->authorize('delete', $job);
+        return redirect()->route('jobs/index');
+    }
 
+    public function destroy(Job $job)
+    {
         $job->delete();
 
-        return redirect('jobs');
+        return redirect()->route('jobs/index');
     }
     
 }

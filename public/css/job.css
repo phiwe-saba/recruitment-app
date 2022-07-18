@@ -1,5 +1,17 @@
-.card .card-body .title{
+.card .card-body a{
+    color:black;
+    text-decoration:none;
+}
+
+.card .card-body a .title{
     font-size: 18px;
     font-style: bold;
-    text-decoration: none;
+}
+
+.card .card-body a .department .location{
+    font-size:15px;
+}
+
+.card{
+    margin-bottom: 10px;
 }

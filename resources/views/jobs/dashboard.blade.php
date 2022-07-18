@@ -1,3 +1,8 @@
+@extends('layouts\admin')
+
+@section('title', 'Job vacancies')
+
+@section('content')
 
 <div class="container">
     <div class="row">
@@ -27,3 +32,5 @@
     @endforeach
 
 </div>
+
+@endsection

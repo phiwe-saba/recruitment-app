@@ -46,6 +46,6 @@ class User extends Authenticatable
 
     //establishing connection of relationship with application
     public function application(){
-        return $this->belongsTo(Application::class);
+        return $this->belongsTo(Application::class, 'user_id');
     }
 }
